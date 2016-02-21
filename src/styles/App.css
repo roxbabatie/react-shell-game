@@ -35,3 +35,12 @@
 .button {
   margin-left: 150px;
 }
+.state {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  margin-left: 250px;
+}
+.wins {
+  margin-right: 10px;
+}
