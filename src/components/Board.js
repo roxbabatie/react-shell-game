@@ -14,9 +14,9 @@ var Board = React.createClass({
       started: false,
       shuffle: false,
       finished: false,
+      state: '',
       wins: 0,
-      looses: 0,
-      selected: 0,
+      loses: 0,
       showBall: 'none',
       showShuffle: 'none',
       showStart: 'block'
@@ -45,22 +45,54 @@ var Board = React.createClass({
     }
     this.setState({board:boardArray})
   },
+
+  clickCup: function(cupSelected) {
+
+   if (this.state.board[cupSelected] == 1) {
+     this.setState({state: 'you win', finished: true, wins: this.state.wins + 1});
+     console.log("win: ", this.state.state)
+   } else {
+     this.setState({state: 'you lose', finished: true, loses: this.state.loses + 1});
+     console.log("loose: ", this.state.state);
+   };
+  },
+  clickFirst : function() {
+    this.clickCup(0);
+  },
+
+  clickSec : function() {
+  this.clickCup(1);
+  },
+
+  clickThird : function() {
+  this.clickCup(2);
+  },
+
   render: function () {
     var style = {display: this.state.showBall};
     var styleShuffle = {display: this.state.showShuffle};
     var styleStart = {display: this.state.showStart};
+    var wins = this.state.wins;
+    var loses = this.state.loses;
+    var state = this.state.state;
     return (
       <div>
+        <span>Wins</span>
+        <span>{wins}</span>
+        <span>Loses</span>
+        <span>{loses}</span>
+        <span>{state}</span>
+
         <div className="board">
-          <div className="cups">
+          <div className="cups" onClick={this.clickFirst}>
             {this.state.board[0]}
           </div>
-          <div className="cups">
+          <div className="cups" onClick={this.clickSec}>
             {this.state.board[1]}
             <div className="ball" style={style}>
             </div>
           </div>
-          <div className="cups">
+          <div className="cups" onClick={this.clickThird}>
             {this.state.board[2]}
           </div>
         </div>
