@@ -13,15 +13,22 @@
 
 .cups {
   margin: 10px;
-  /*transition: .5s ease-in-out;*/
   border-bottom: 80px solid red;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
   height: 0;
   position: relative;
   float: left;
-  /*transitionDuration: '300ms';*/
   width: 40px;
+}
+
+.ball {
+  display: block;
+  background-color: black;
+  border-radius: 50%;
+  height: 28px;
+  width: 30px;
+  margin: 62px 5px;
 }
 
 .button {

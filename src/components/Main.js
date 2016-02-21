@@ -2,7 +2,7 @@ require('normalize.css');
 require('styles/App.css');
 
 import React from 'react';
-import Cups from './Cups';
+
 import Board from './Board';
 
 var AppComponent = React.createClass({
