@@ -1,21 +1,29 @@
-/* Base Application Styles */
-body {
-  color: #fff;
-  background: #222;
+.board {
+  width: 420px;
+  height: 120px;
+  border: 2px solid black;
+  margin: 10px;
+}
+.heading {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #2C2C2C;
+  margin-left: 60px;
 }
 
-.index img {
-  margin: 40px auto;
-  border-radius: 4px;
-  background: #fff;
-  display: block;
+.cups {
+  margin: 10px;
+  /*transition: .5s ease-in-out;*/
+  border-bottom: 80px solid red;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  height: 0;
+  position: relative;
+  float: left;
+  /*transitionDuration: '300ms';*/
+  width: 40px;
 }
 
-.index .notice {
-  margin: 20px auto;
-  padding: 15px 0;
-  text-align: center;
-  border: 1px solid #000;
-  border-width: 1px 0;
-  background: #666;
+.button {
+  margin-left: 150px;
 }
